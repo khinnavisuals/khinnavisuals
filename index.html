@@ -44,33 +44,32 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       height: var(--nav-h);
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+      display: flex;
       align-items: center;
-      gap: 32px;
-      padding: 0 clamp(24px, 5vw, 72px);
-      background: rgba(28, 25, 21, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201,169,110,0.1);
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(28, 25, 21, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201,169,110,0.12);
       transition: background 0.4s var(--ease);
     }
-    nav.scrolled {
-      background: rgba(28, 25, 21, 0.99);
-    }
+    nav.scrolled { background: rgba(28, 25, 21, 1); }
 
     .nav-logo {
-      display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3px;
       text-decoration: none;
       flex-shrink: 0;
-      min-width: 80px;
     }
     .nav-logo .wordmark-k {
-      font-family: var(--ff-display);
-      font-size: 1.25rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
       font-weight: 500;
       letter-spacing: 0.22em;
-      color: #C9A96E !important;
+      color: #C9A96E;
       line-height: 1;
       text-transform: uppercase;
       display: block;
@@ -79,39 +78,155 @@
       width: 100%; height: 1px; background: #C9A96E; opacity: 0.7; display: block;
     }
     .nav-logo .wordmark-v {
-      font-family: var(--ff-body);
-      font-size: 0.62rem;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.55rem;
       font-weight: 400;
-      letter-spacing: 0.42em;
-      color: #E8DCCA !important;
+      letter-spacing: 0.4em;
+      color: #E8DCCA;
       text-transform: uppercase;
       display: block;
     }
 
     .nav-links {
-      display: flex; gap: 28px; list-style: none;
-      justify-content: center;
+      display: flex;
+      gap: 32px;
+      list-style: none;
     }
     .nav-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--sand);
-      opacity: 0.8;
+      color: #E8DCCA;
+      opacity: 0.75;
       transition: opacity 0.2s, color 0.2s;
     }
-    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a:hover { opacity: 1; color: #C9A96E; }
 
     .nav-cta {
-      font-size: 0.72rem;
+      display: inline-block;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.65rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid rgba(201,169,110,0.45);
-      padding: 9px 22px;
+      color: #C9A96E;
+      border: 1px solid rgba(201,169,110,0.5);
+      padding: 9px 20px;
+      cursor: pointer;
+      background: none;
       transition: background 0.25s, color 0.25s;
+      flex-shrink: 0;
     }
-    .nav-cta:hover { background: var(--gold); color: var(--ink); }
+    .nav-cta:hover { background: #C9A96E; color: #1C1915; }
+
+    /* ── Booking Modal ───────────────────────────────────────── */
+    .booking-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(28,25,21,0.85);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+    }
+    .booking-overlay.open { display: flex; }
+    .booking-modal {
+      background: #211e1a;
+      border: 1px solid rgba(201,169,110,0.2);
+      width: min(640px, 92vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 48px;
+    }
+    .booking-modal h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #F7F2EA;
+      margin-bottom: 6px;
+    }
+    .booking-modal h2 em { font-style: italic; color: #C9A96E; }
+    .booking-modal .bk-sub {
+      font-size: 0.8rem;
+      color: #7A6F63;
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+    .bk-close {
+      position: absolute; top: 16px; right: 20px;
+      font-size: 1.4rem; color: #7A6F63; cursor: pointer;
+      background: none; border: none;
+    }
+    .booking-modal { position: relative; }
+    /* Calendar */
+    .cal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .cal-header button {
+      font-size: 1.1rem; color: #C9A96E; padding: 4px 10px;
+      border: 1px solid rgba(201,169,110,0.3);
+      transition: background 0.2s;
+    }
+    .cal-header button:hover { background: rgba(201,169,110,0.1); }
+    .cal-month {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      color: #F7F2EA;
+      letter-spacing: 0.08em;
+    }
+    .cal-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      gap: 4px; margin-bottom: 24px;
+    }
+    .cal-day-name {
+      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #7A6F63; text-align: center; padding: 4px 0;
+    }
+    .cal-day {
+      aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; color: #E8DCCA; cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+      border-radius: 2px;
+    }
+    .cal-day:hover:not(.disabled):not(.empty) {
+      border-color: rgba(201,169,110,0.4); color: #C9A96E;
+    }
+    .cal-day.selected { background: #C9A96E; color: #1C1915; font-weight: 500; }
+    .cal-day.today { border-color: rgba(201,169,110,0.3); }
+    .cal-day.disabled { color: #3a3530; cursor: default; }
+    .cal-day.empty { cursor: default; }
+    /* Time slots */
+    .bk-label {
+      font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: #7A6F63; margin-bottom: 10px;
+    }
+    .time-slots {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+    }
+    .time-slot {
+      font-size: 0.75rem; letter-spacing: 0.1em;
+      border: 1px solid rgba(201,169,110,0.25);
+      color: #E8DCCA; padding: 8px 16px; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+    .time-slot:hover { border-color: rgba(201,169,110,0.6); color: #C9A96E; }
+    .time-slot.selected { background: #C9A96E; color: #1C1915; border-color: #C9A96E; }
+    /* Booking form fields */
+    .bk-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .bk-field { display: flex; flex-direction: column; gap: 5px; }
+    .bk-field label { font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; color: #7A6F63; }
+    .bk-field input, .bk-field select {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,169,110,0.2);
+      color: #F7F2EA;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.88rem; font-weight: 300;
+      padding: 11px 14px; outline: none;
+      transition: border-color 0.2s;
+      appearance: none; border-radius: 0;
+    }
+    .bk-field input:focus, .bk-field select:focus { border-color: #C9A96E; }
+    .bk-field select option { background: #211e1a; }
 
     /* hamburger */
     .hamburger {
@@ -754,9 +869,11 @@
 
     /* ── Responsive ──────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .nav-links, .nav-cta { display: none; }
+      .nav-links { display: none; }
       .hamburger { display: flex; }
-      nav { grid-template-columns: auto 1fr auto; }
+    }
+    @media (max-width: 640px) {
+      .nav-cta { display: none; }
     }
 
     @media (max-width: 900px) {
@@ -812,12 +929,61 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <a href="#contact" class="nav-cta">Book a shoot</a>
+    <button class="nav-cta" onclick="openBooking()">Book a shoot</button>
 
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <!-- ── Booking Modal ── -->
+  <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-modal">
+      <button class="bk-close" onclick="closeBooking()">✕</button>
+      <h2>Book a <em>shoot</em></h2>
+      <p class="bk-sub">Select a date, time, and service — we'll confirm within 24 hours.</p>
+
+      <div class="cal-header">
+        <button onclick="prevMonth()">‹</button>
+        <span class="cal-month" id="calMonth"></span>
+        <button onclick="nextMonth()">›</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+
+      <p class="bk-label">Available times</p>
+      <div class="time-slots" id="timeSlots">
+        <button class="time-slot" onclick="selectTime(this)">09:00</button>
+        <button class="time-slot" onclick="selectTime(this)">10:00</button>
+        <button class="time-slot" onclick="selectTime(this)">11:00</button>
+        <button class="time-slot" onclick="selectTime(this)">13:00</button>
+        <button class="time-slot" onclick="selectTime(this)">14:00</button>
+        <button class="time-slot" onclick="selectTime(this)">15:00</button>
+        <button class="time-slot" onclick="selectTime(this)">16:00</button>
+      </div>
+
+      <div class="bk-fields">
+        <div class="bk-field">
+          <label>Your name</label>
+          <input type="text" id="bk-name" placeholder="Full name" />
+        </div>
+        <div class="bk-field">
+          <label>Email</label>
+          <input type="email" id="bk-email" placeholder="your@email.com" />
+        </div>
+        <div class="bk-field">
+          <label>Service</label>
+          <select id="bk-service">
+            <option value="" disabled selected>Select a service</option>
+            <option>Real Estate Photography</option>
+            <option>Product Photography</option>
+            <option>Visual Consulting</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="submitBooking()" style="width:100%;text-align:center;">Confirm booking request</button>
+    </div>
+  </div>
 
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
@@ -1213,6 +1379,105 @@
       e.preventDefault();
       const btn = e.target.querySelector('button[type="submit"]');
       btn.textContent = 'Sent — we\'ll be in touch.';
+      btn.style.background = '#7A6F63';
+      btn.disabled = true;
+    }
+
+    // ── Booking modal
+    let currentDate = new Date();
+    let selectedDay = null;
+    let selectedTime = null;
+
+    function openBooking() {
+      document.getElementById('bookingOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      renderCalendar();
+    }
+    function closeBooking() {
+      document.getElementById('bookingOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('bookingOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeBooking();
+    });
+
+    function renderCalendar() {
+      const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      document.getElementById('calMonth').textContent = months[month] + ' ' + year;
+
+      const grid = document.getElementById('calGrid');
+      grid.innerHTML = '';
+      const days = ['Mo','Tu','We','Th','Fr','Sa','Su'];
+      days.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'cal-day-name';
+        el.textContent = d;
+        grid.appendChild(el);
+      });
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const offset = (firstDay === 0) ? 6 : firstDay - 1;
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const today = new Date();
+
+      for (let i = 0; i < offset; i++) {
+        const el = document.createElement('div');
+        el.className = 'cal-day empty';
+        grid.appendChild(el);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const el = document.createElement('div');
+        el.className = 'cal-day';
+        el.textContent = d;
+        const thisDate = new Date(year, month, d);
+        const isWeekend = thisDate.getDay() === 0 || thisDate.getDay() === 6;
+        const isPast = thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+        if (isPast || isWeekend) {
+          el.classList.add('disabled');
+        } else {
+          if (thisDate.toDateString() === today.toDateString()) el.classList.add('today');
+          if (selectedDay && thisDate.toDateString() === selectedDay.toDateString()) el.classList.add('selected');
+          el.addEventListener('click', () => selectDay(el, thisDate));
+        }
+        grid.appendChild(el);
+      }
+    }
+
+    function selectDay(el, date) {
+      selectedDay = date;
+      document.querySelectorAll('.cal-day').forEach(d => d.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function prevMonth() {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar();
+    }
+    function nextMonth() {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar();
+    }
+
+    function selectTime(btn) {
+      document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedTime = btn.textContent;
+    }
+
+    function submitBooking() {
+      const name = document.getElementById('bk-name').value;
+      const email = document.getElementById('bk-email').value;
+      const service = document.getElementById('bk-service').value;
+      if (!selectedDay || !selectedTime || !name || !email || !service) {
+        alert('Please fill in all fields, select a date and time.');
+        return;
+      }
+      const btn = document.querySelector('.booking-modal .btn-primary');
+      btn.textContent = 'Request sent — we\'ll confirm shortly!';
       btn.style.background = '#7A6F63';
       btn.disabled = true;
     }
