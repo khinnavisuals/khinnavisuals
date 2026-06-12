@@ -628,7 +628,6 @@
     }
     #services .section-title { color: var(--ink); }
     #services .section-body { color: var(--stone); }
-
     .services-grid {
       margin-top: 64px;
       display: grid;
@@ -636,7 +635,7 @@
       gap: 2px;
     }
     .service-card {
-      background: white;
+      background: #161310;
       padding: 48px 40px 52px;
       position: relative;
       overflow: hidden;
@@ -657,24 +656,33 @@
       font-family: var(--ff-display);
       font-size: 3.5rem;
       font-weight: 300;
-      color: var(--sand);
+      color: rgba(201,169,110,0.2);
       line-height: 1;
       margin-bottom: 24px;
+      transition: color 0.3s;
     }
+    .service-card:hover .service-num { color: var(--sand); }
+
     .service-title {
       font-family: var(--ff-display);
       font-size: 1.55rem;
       font-weight: 500;
-      color: var(--ink);
+      color: var(--cream);
       margin-bottom: 16px;
       line-height: 1.2;
+      transition: color 0.3s;
     }
+    .service-card:hover .service-title { color: var(--ink); }
+
     .service-desc {
       font-size: 0.88rem;
       color: var(--stone);
       line-height: 1.8;
       margin-bottom: 28px;
+      transition: color 0.3s;
     }
+    .service-card:hover .service-desc { color: var(--stone); }
+
     .service-list {
       list-style: none;
       display: flex; flex-direction: column; gap: 8px;
@@ -684,7 +692,9 @@
       letter-spacing: 0.08em;
       color: var(--stone);
       display: flex; align-items: center; gap: 10px;
+      transition: color 0.3s;
     }
+    .service-card:hover .service-list li { color: var(--stone); }
     .service-list li::before {
       content: '';
       width: 18px; height: 1px;
