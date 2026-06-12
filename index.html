@@ -42,16 +42,18 @@
 
     /* ── Navigation ──────────────────────────────────────────── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       height: var(--nav-h);
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 clamp(24px, 5vw, 72px);
-      transition: background 0.4s var(--ease), backdrop-filter 0.4s var(--ease);
-    }
-    nav.scrolled {
-      background: rgba(28, 25, 21, 0.92);
+      background: rgba(28, 25, 21, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,169,110,0.1);
+      transition: background 0.4s var(--ease);
+    }
+    nav.scrolled {
+      background: rgba(28, 25, 21, 0.97);
     }
 
     .nav-logo {
@@ -79,7 +81,8 @@
     }
 
     .nav-links {
-      display: flex; gap: 36px; list-style: none;
+      display: flex; gap: 28px; list-style: none;
+      flex-shrink: 0;
     }
     .nav-links a {
       font-size: 0.72rem;
@@ -740,10 +743,12 @@
     }
 
     /* ── Responsive ──────────────────────────────────────────── */
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
+    }
 
+    @media (max-width: 900px) {
       .hero-content {
         grid-template-columns: 1fr;
       }
