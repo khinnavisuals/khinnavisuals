@@ -970,13 +970,21 @@
 
       <p class="bk-label">Available times</p>
       <div class="time-slots" id="timeSlots">
+        <button class="time-slot" onclick="selectTime(this)">08:00</button>
         <button class="time-slot" onclick="selectTime(this)">09:00</button>
         <button class="time-slot" onclick="selectTime(this)">10:00</button>
         <button class="time-slot" onclick="selectTime(this)">11:00</button>
+        <button class="time-slot" onclick="selectTime(this)">12:00</button>
         <button class="time-slot" onclick="selectTime(this)">13:00</button>
         <button class="time-slot" onclick="selectTime(this)">14:00</button>
         <button class="time-slot" onclick="selectTime(this)">15:00</button>
         <button class="time-slot" onclick="selectTime(this)">16:00</button>
+        <button class="time-slot" onclick="selectTime(this)">17:00</button>
+        <button class="time-slot" onclick="selectTime(this)">18:00</button>
+        <button class="time-slot" onclick="selectTime(this)">19:00</button>
+        <button class="time-slot" onclick="selectTime(this)">20:00</button>
+        <button class="time-slot" onclick="selectTime(this)">21:00</button>
+        <button class="time-slot" onclick="selectTime(this)">22:00</button>
       </div>
 
       <div class="bk-fields">
@@ -1451,10 +1459,9 @@
         el.className = 'cal-day';
         el.textContent = d;
         const thisDate = new Date(year, month, d);
-        const isWeekend = thisDate.getDay() === 0 || thisDate.getDay() === 6;
         const isPast = thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
-        if (isPast || isWeekend) {
+        if (isPast) {
           el.classList.add('disabled');
         } else {
           if (thisDate.toDateString() === today.toDateString()) el.classList.add('today');
