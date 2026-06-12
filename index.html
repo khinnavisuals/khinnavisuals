@@ -667,60 +667,71 @@
       line-height: 1.75;
     }
 
-    /* ── About ───────────────────────────────────────────────── */
-    #about {
-      background: var(--sand);
-      color: var(--ink);
+    /* ── About Editorial ─────────────────────────────────────── */
+    .about-editorial {
+      background: var(--ink);
+      color: var(--cream);
+      padding: clamp(72px, 10vw, 130px) 0;
     }
-    #about .section-title { color: var(--ink); }
-
-    .about-grid {
+    .about-ed-top {
+      padding: 0 clamp(24px, 6vw, 96px);
+      margin-bottom: 64px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .about-ed-headline {
+      font-family: var(--ff-display);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--cream);
+    }
+    .about-ed-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .about-ed-body {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 96px);
-      align-items: center;
     }
-    .about-visual {
+    .about-ed-left {
       position: relative;
+      overflow: hidden;
     }
-    .about-img-main {
+    .about-ed-img {
       width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80') center/cover;
+      height: 100%;
+      min-height: 560px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s var(--ease);
     }
-    .about-img-accent {
-      position: absolute;
-      bottom: -36px; right: -36px;
-      width: 52%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      background: url('https://images.unsplash.com/photo-1542038374869-3c2e8a7c91ee?w=600&q=80') center/cover;
-      border: 6px solid var(--sand);
+    .about-ed-left:hover .about-ed-img { transform: scale(1.03); }
+    .about-ed-right {
+      padding: clamp(40px, 5vw, 80px) clamp(32px, 5vw, 80px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      background: #161310;
     }
-    .about-text { padding: clamp(0px, 2vw, 40px) 0; }
-    .about-text .section-body { max-width: 100%; }
-    .about-text .section-body + .section-body { margin-top: 20px; }
-    .about-stats {
-      margin-top: 40px;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-    .stat-val {
-      font-family: var(--ff-display);
-      font-size: 2.8rem;
-      font-weight: 300;
-      color: var(--ink);
-      line-height: 1;
-    }
-    .stat-val span { color: var(--gold); }
-    .stat-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
+    .about-ed-block {}
+    .about-ed-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--stone);
-      margin-top: 6px;
+      color: var(--gold);
+      margin-bottom: 12px;
     }
+    .about-ed-text {
+      font-size: 0.95rem;
+      color: var(--stone);
+      line-height: 1.85;
+    }
+    .about-ed-cta { margin-top: 8px; }
 
     /* ── Testimonials ────────────────────────────────────────── */
     #testimonials {
@@ -908,10 +919,8 @@
       .portfolio-grid { grid-template-columns: 1fr 1fr; }
       .pf-item { grid-column: span 1 !important; grid-row: span 1 !important; }
       .pf-img { min-height: 200px; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-visual { max-height: 400px; overflow: hidden; }
-      .about-img-accent { display: none; }
-      .testimonials-track { grid-template-columns: 1fr; }
+      .about-ed-body { grid-template-columns: 1fr; }
+      .about-ed-img { min-height: 340px; }
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
@@ -921,7 +930,6 @@
     @media (max-width: 560px) {
       .nav-cta { display: none !important; }
       .portfolio-grid { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: 1fr 1fr; }
       .hero-panels { grid-template-columns: 1fr; }
       #panel-prod { display: none; }
       .hero-divider { display: none; }
@@ -1222,59 +1230,31 @@
   </section>
 
   <!-- ── About ── -->
-  <section id="about">
-    <div class="about-grid">
-      <div class="about-visual reveal">
-        <div class="about-img-main" role="img" aria-label="Kevin Hinna, Khinna Visuals"></div>
-        <div class="about-img-accent" role="img" aria-label="Camera equipment"></div>
-      </div>
-      <div class="about-text">
-        <p class="section-eyebrow reveal">About</p>
-        <h2 class="section-title reveal reveal-delay-1">Photography is<br><em>observation.</em></h2>
-        <div class="gold-rule reveal reveal-delay-2"></div>
-        <p class="section-body reveal reveal-delay-2">Khinna Visuals is a Luxembourg-based photography studio specialising in real estate and product imagery. Founded on the belief that every image should have a reason to exist — and a job to do — we bring a methodical, light-led approach to every commission.</p>
-        <p class="section-body reveal reveal-delay-2" style="margin-top:16px">We work closely with estate agencies, property developers, e-commerce brands, and creative agencies across Luxembourg, the Greater Region, and beyond — building long-term visual libraries as well as one-off campaigns.</p>
-        <div class="about-stats">
-          <div class="reveal">
-            <p class="stat-val">200<span>+</span></p>
-            <p class="stat-label">Properties shot</p>
-          </div>
-          <div class="reveal reveal-delay-1">
-            <p class="stat-val">80<span>+</span></p>
-            <p class="stat-label">Brands served</p>
-          </div>
-          <div class="reveal reveal-delay-2">
-            <p class="stat-val">48<span>h</span></p>
-            <p class="stat-label">Turnaround</p>
-          </div>
-          <div class="reveal reveal-delay-3">
-            <p class="stat-val">5<span>+</span></p>
-            <p class="stat-label">Years in Luxembourg</p>
-          </div>
-        </div>
-      </div>
+  <section id="about" class="about-editorial">
+    <div class="about-ed-top reveal">
+      <p class="section-eyebrow">About</p>
+      <h2 class="about-ed-headline">Every image<br>should have a<br><em>reason to exist.</em></h2>
     </div>
-  </section>
-
-  <!-- ── Testimonials ── -->
-  <section id="testimonials">
-    <p class="section-eyebrow reveal" style="text-align:center">Client voices</p>
-    <h2 class="section-title reveal reveal-delay-1" style="text-align:center">The images<br><em>spoke first.</em></h2>
-    <div class="testimonials-track">
-      <div class="testimonial reveal">
-        <p class="quote-mark">"</p>
-        <p class="quote-text">Khinna Visuals delivered a full property shoot within 24 hours of booking. The images were on listings by morning and we had three viewing requests by noon.</p>
-        <p class="quote-author"><strong>Sophie Brenner</strong>Senior Agent, Engel &amp; Völkers Luxembourg</p>
+    <div class="about-ed-body">
+      <div class="about-ed-left reveal">
+        <div class="about-ed-img" style="background-image:url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=900&q=80')" role="img" aria-label="Photography in action"></div>
       </div>
-      <div class="testimonial reveal reveal-delay-1">
-        <p class="quote-mark">"</p>
-        <p class="quote-text">We'd been using generic stock for two years. One editorial shoot with Khinna and our conversion rate on product pages went up noticeably within a month.</p>
-        <p class="quote-author"><strong>Marc Fonseca</strong>Brand Director, Maison Orvain</p>
-      </div>
-      <div class="testimonial reveal reveal-delay-2">
-        <p class="quote-mark">"</p>
-        <p class="quote-text">The visual consulting session alone was worth it. They identified three things we were doing wrong before we even discussed the brief — and fixed all of them in the shoot.</p>
-        <p class="quote-author"><strong>Irina Kohl</strong>Marketing Manager, Lux Habitat Group</p>
+      <div class="about-ed-right">
+        <div class="about-ed-block reveal">
+          <p class="about-ed-label">The studio</p>
+          <p class="about-ed-text">Khinna Visuals is a Luxembourg-based photography studio specialising in real estate and product imagery. Every commission is approached with precision, patience, and an obsession with light.</p>
+        </div>
+        <div class="about-ed-block reveal reveal-delay-1">
+          <p class="about-ed-label">The approach</p>
+          <p class="about-ed-text">We don't shoot fast and fix in post. We plan, we prepare, and we stay on location until the image earns its place. The result is a library of images that work — on listings, on product pages, and on screens of every size.</p>
+        </div>
+        <div class="about-ed-block reveal reveal-delay-2">
+          <p class="about-ed-label">The territory</p>
+          <p class="about-ed-text">Based in Kayl, working across Luxembourg and the Greater Region. Available for single commissions, ongoing retainers, and agency partnerships.</p>
+        </div>
+        <div class="about-ed-cta reveal reveal-delay-3">
+          <a href="#contact" class="btn-outline" style="display:inline-block">Start a conversation</a>
+        </div>
       </div>
     </div>
   </section>
