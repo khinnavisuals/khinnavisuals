@@ -10,7 +10,11 @@
   <meta name="keywords" content="real estate photography Luxembourg, property photographer Luxembourg, product photography Luxembourg, interior photography Luxembourg, drone photography Luxembourg, architectural photography, immobilier photographie Luxembourg" />
   <meta name="author" content="Kevin Hinna — Khinna Visuals" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://khinnavisuals.com" />
+  <link rel="canonical" href="https://khinnavisuals.com/" />
+  <link rel="alternate" hreflang="en" href="https://khinnavisuals.com/" />
+  <link rel="alternate" hreflang="fr" href="https://khinnavisuals.com/fr.html" />
+  <link rel="alternate" hreflang="de" href="https://khinnavisuals.com/de.html" />
+  <link rel="alternate" hreflang="x-default" href="https://khinnavisuals.com/" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta name="google-site-verification" content="fFFo9tA4wpyhqwZ7PD198oBYyM4ifBXJgEbJuUmiKKc" />
 
@@ -89,6 +93,8 @@
       --cream: #F7F2EA;
       --sand:  #E8DCCA;
       --stone: #7A6F63;
+      --stone-on-dark:  #ADA192;
+      --stone-on-light: #6B5F52;
 
       --ff-display: 'Cormorant Garamond', Georgia, serif;
       --ff-body:    'Jost', system-ui, sans-serif;
@@ -191,6 +197,22 @@
     }
     .nav-links a:hover { opacity: 1; color: #C9A96E; }
 
+    /* ── Language switcher ── */
+    .nav-right { display: flex; align-items: center; gap: 22px; flex-shrink: 0; }
+    .lang-switch { display: flex; align-items: center; gap: 8px; }
+    .lang-switch a {
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #E8DCCA;
+      opacity: 0.5;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .lang-switch a:hover { opacity: 1; color: #C9A96E; }
+    .lang-switch a.active { color: #C9A96E; opacity: 1; }
+    .lang-switch .sep { color: rgba(201,169,110,0.35); font-size: 0.6rem; }
+
     .nav-cta {
       display: inline-block !important;
       font-family: 'Jost', system-ui, sans-serif;
@@ -239,7 +261,7 @@
     .booking-modal h2 em { font-style: italic; color: #C9A96E; }
     .booking-modal .bk-sub {
       font-size: 0.8rem;
-      color: #7A6F63;
+      color: #9b9084;
       letter-spacing: 0.08em;
       margin-bottom: 32px;
     }
@@ -291,7 +313,7 @@
     /* Time slots */
     .bk-label {
       font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: #7A6F63; margin-bottom: 10px;
+      color: #9b9084; margin-bottom: 10px;
     }
     .time-slots {
       display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
@@ -307,7 +329,7 @@
     /* Booking form fields */
     .bk-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
     .bk-field { display: flex; flex-direction: column; gap: 5px; }
-    .bk-field label { font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; color: #7A6F63; }
+    .bk-field label { font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; color: #9b9084; }
     .bk-field input, .bk-field select {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(201,169,110,0.2);
@@ -354,6 +376,17 @@
       transition: color 0.2s;
     }
     .mobile-menu a:hover { color: var(--gold); }
+    .mobile-lang {
+      display: flex; gap: 18px; margin-top: 8px;
+    }
+    .mobile-lang a {
+      font-family: var(--ff-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .mobile-lang a.active { color: var(--gold); }
 
     /* ── Hero ────────────────────────────────────────────────── */
     #hero {
@@ -395,11 +428,11 @@
     #panel-prod::after {
       background: linear-gradient(to left, rgba(28,25,21,0.62) 0%, rgba(28,25,21,0.22) 100%);
     }
-    /* centre vignette */
+    /* centre vignette + readability scrim */
     .hero-panels::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(28,25,21,0.9) 0%, rgba(28,25,21,0) 55%);
+      background: linear-gradient(to top, rgba(28,25,21,0.96) 0%, rgba(28,25,21,0.78) 30%, rgba(28,25,21,0.35) 58%, rgba(28,25,21,0) 80%);
       pointer-events: none;
     }
     /* vertical divider */
@@ -435,6 +468,7 @@
       line-height: 1.0;
       letter-spacing: -0.01em;
       color: var(--cream);
+      text-shadow: 0 1px 30px rgba(28,25,21,0.45);
     }
     .hero-left h1 em {
       font-style: italic;
@@ -442,10 +476,11 @@
     }
     .hero-left .sub {
       margin-top: 24px;
-      font-size: 0.875rem;
-      color: var(--stone);
+      font-size: 0.9rem;
+      color: rgba(247,242,234,0.88);
       letter-spacing: 0.06em;
-      max-width: 420px;
+      line-height: 1.75;
+      max-width: 440px;
     }
     .hero-left .hero-btns {
       margin-top: 36px;
@@ -484,7 +519,7 @@
       font-size: 0.65rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: rgba(247,242,234,0.4);
+      color: rgba(247,242,234,0.5);
       writing-mode: vertical-rl;
       transform: rotate(180deg);
     }
@@ -598,8 +633,19 @@
     }
     .pf-item:hover .pf-img { transform: scale(1.04); }
 
+    /* constant cohesion wash so bright product shots sit with the dark interiors */
+    .pf-item::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(28,25,21,0.32) 0%, rgba(28,25,21,0) 55%);
+    }
+    .pf-item[data-cat="product"]::before {
+      background: rgba(28,25,21,0.07);
+    }
+
     .pf-overlay {
-      position: absolute; inset: 0;
+      position: absolute; inset: 0; z-index: 2;
       background: linear-gradient(to top, rgba(28,25,21,0.88) 0%, transparent 55%);
       opacity: 0;
       transition: opacity 0.35s var(--ease);
@@ -627,7 +673,7 @@
       color: var(--ink);
     }
     #services .section-title { color: var(--ink); }
-    #services .section-body { color: var(--stone); }
+    #services .section-body { color: var(--stone-on-light); }
     .services-grid {
       margin-top: 64px;
       display: grid;
@@ -656,12 +702,12 @@
       font-family: var(--ff-display);
       font-size: 3.5rem;
       font-weight: 300;
-      color: rgba(201,169,110,0.2);
+      color: rgba(201,169,110,0.5);
       line-height: 1;
       margin-bottom: 24px;
       transition: color 0.3s;
     }
-    .service-card:hover .service-num { color: var(--sand); }
+    .service-card:hover .service-num { color: var(--gold); }
 
     .service-title {
       font-family: var(--ff-display);
@@ -676,12 +722,12 @@
 
     .service-desc {
       font-size: 0.88rem;
-      color: var(--stone);
+      color: var(--stone-on-dark);
       line-height: 1.8;
       margin-bottom: 28px;
       transition: color 0.3s;
     }
-    .service-card:hover .service-desc { color: var(--stone); }
+    .service-card:hover .service-desc { color: var(--stone-on-light); }
 
     .service-list {
       list-style: none;
@@ -690,11 +736,11 @@
     .service-list li {
       font-size: 0.78rem;
       letter-spacing: 0.08em;
-      color: var(--stone);
+      color: var(--stone-on-dark);
       display: flex; align-items: center; gap: 10px;
       transition: color 0.3s;
     }
-    .service-card:hover .service-list li { color: var(--stone); }
+    .service-card:hover .service-list li { color: var(--stone-on-light); }
     .service-list li::before {
       content: '';
       width: 18px; height: 1px;
@@ -745,7 +791,7 @@
     }
     .step-body {
       font-size: 0.83rem;
-      color: var(--stone);
+      color: var(--stone-on-dark);
       line-height: 1.75;
     }
 
@@ -813,7 +859,7 @@
     }
     .about-ed-text {
       font-size: 1rem;
-      color: var(--stone);
+      color: var(--stone-on-dark);
       line-height: 1.9;
     }
     .about-ed-cta { margin-top: 8px; }
@@ -887,7 +933,7 @@
       font-size: 0.65rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--stone);
+      color: var(--stone-on-light);
     }
     .contact-detail .value {
       font-family: var(--ff-display);
@@ -904,7 +950,7 @@
       font-size: 0.65rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--stone);
+      color: var(--stone-on-light);
       border: 1px solid rgba(122,111,99,0.3);
       padding: 8px 18px;
       transition: border-color 0.2s, color 0.2s;
@@ -919,7 +965,7 @@
       font-size: 0.65rem;
       letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--stone);
+      color: var(--stone-on-light);
     }
     .field input, .field textarea, .field select {
       background: white;
@@ -987,22 +1033,27 @@
       bottom: 28px;
       right: 28px;
       z-index: 900;
-      width: 54px;
-      height: 54px;
-      background: #25D366;
+      width: 52px;
+      height: 52px;
+      background: rgba(33,30,26,0.92);
+      border: 1px solid rgba(201,169,110,0.55);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: transform 0.2s, background 0.25s, border-color 0.25s;
       text-decoration: none;
     }
     .whatsapp-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+      transform: translateY(-2px);
+      background: var(--gold);
+      border-color: var(--gold);
     }
-    .whatsapp-btn svg { width: 28px; height: 28px; fill: white; }
+    .whatsapp-btn svg { width: 26px; height: 26px; fill: var(--gold); transition: fill 0.25s; }
+    .whatsapp-btn:hover svg { fill: var(--ink); }
 
     /* ── Cookie Banner ───────────────────────────────────────── */
     .cookie-banner {
@@ -1023,7 +1074,7 @@
     .cookie-banner.visible { transform: translateY(0); }
     .cookie-text {
       font-size: 0.8rem;
-      color: var(--stone);
+      color: var(--stone-on-dark);
       line-height: 1.6;
       max-width: 680px;
     }
@@ -1083,10 +1134,12 @@
       .form-row { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
       .process-steps::before { display: none; }
+      .testimonials-track { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 560px) {
       .nav-cta { display: none !important; }
+      .lang-switch { gap: 6px; }
       .portfolio-grid { grid-template-columns: 1fr; }
       .hero-panels { grid-template-columns: 1fr; }
       #panel-prod { display: none; }
@@ -1113,11 +1166,19 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <button class="nav-cta" onclick="openBooking()">Book a shoot</button>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <div class="lang-switch" aria-label="Language">
+        <a href="index.html" class="active" hreflang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="fr.html" hreflang="fr">FR</a>
+        <span class="sep">·</span>
+        <a href="de.html" hreflang="de">DE</a>
+      </div>
+      <button class="nav-cta" onclick="openBooking()">Book a shoot</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- ── Booking Modal ── -->
@@ -1183,6 +1244,11 @@
     <a href="#services" onclick="closeMobile()">Services</a>
     <a href="#about"    onclick="closeMobile()">About</a>
     <a href="#contact"  onclick="closeMobile()">Contact</a>
+    <div class="mobile-lang">
+      <a href="index.html" class="active">EN</a>
+      <a href="fr.html">FR</a>
+      <a href="de.html">DE</a>
+    </div>
   </div>
 
   <!-- ── Hero ── -->
@@ -1688,14 +1754,16 @@
     }
     // ── Cookie banner
     function acceptCookies() {
-      localStorage.setItem('cookies_accepted', 'true');
+      try { localStorage.setItem('cookies_accepted', 'true'); } catch (e) {}
       document.getElementById('cookieBanner').classList.remove('visible');
     }
     function declineCookies() {
-      localStorage.setItem('cookies_accepted', 'declined');
+      try { localStorage.setItem('cookies_accepted', 'declined'); } catch (e) {}
       document.getElementById('cookieBanner').classList.remove('visible');
     }
-    if (!localStorage.getItem('cookies_accepted')) {
+    let cookieChoice = null;
+    try { cookieChoice = localStorage.getItem('cookies_accepted'); } catch (e) {}
+    if (!cookieChoice) {
       setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500);
     }
   </script>
