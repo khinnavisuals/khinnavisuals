@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary SEO ── -->
+  <title>Khinna Visuals — Photographe immobilier & produit au Luxembourg</title>
+  <meta name="description" content="Studio de photographie immobilière et produit basé au Luxembourg. Khinna Visuals réalise des images d'architecture, d'intérieur et de produit qui font vendre les biens et valorisent les marques au Luxembourg et dans la Grande Région." />
+  <meta name="keywords" content="photographe immobilier Luxembourg, photographie immobilière Luxembourg, photographe produit Luxembourg, photographie d'intérieur Luxembourg, photographie par drone Luxembourg, photographie d'architecture, immobilier photographie Luxembourg" />
+  <meta name="author" content="Kevin Hinna — Khinna Visuals" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://khinnavisuals.com/fr.html" />
+  <link rel="alternate" hreflang="en" href="https://khinnavisuals.com/" />
+  <link rel="alternate" hreflang="fr" href="https://khinnavisuals.com/fr.html" />
+  <link rel="alternate" hreflang="de" href="https://khinnavisuals.com/de.html" />
+  <link rel="alternate" hreflang="x-default" href="https://khinnavisuals.com/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <meta name="google-site-verification" content="fFFo9tA4wpyhqwZ7PD198oBYyM4ifBXJgEbJuUmiKKc" />
+
+  <!-- ── Open Graph (Facebook, LinkedIn) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khinnavisuals.com/fr.html" />
+  <meta property="og:title" content="Khinna Visuals — Photographe immobilier & produit au Luxembourg" />
+  <meta property="og:description" content="Studio de photographie immobilière et produit au Luxembourg. Des images qui font vendre les biens et valorisent les marques." />
+  <meta property="og:image" content="https://khinnavisuals.com/about-photo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Khinna Visuals" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khinna Visuals — Photographe immobilier & produit au Luxembourg" />
+  <meta name="twitter:description" content="Studio de photographie immobilière et produit basé au Luxembourg." />
+  <meta name="twitter:image" content="https://khinnavisuals.com/about-photo.jpg" />
+
+  <!-- ── Structured Data (LocalBusiness) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://khinnavisuals.com",
+    "name": "Khinna Visuals",
+    "description": "Studio de photographie immobilière et produit basé au Luxembourg.",
+    "url": "https://khinnavisuals.com",
+    "telephone": "+352691855405",
+    "email": "info@khinnavisuals.com",
+    "image": "https://khinnavisuals.com/about-photo.jpg",
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kayl",
+      "addressCountry": "LU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.4833,
+      "longitude": 6.0500
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Luxembourg" },
+      { "@type": "AdministrativeArea", "name": "Greater Region" }
+    ],
+    "serviceType": [
+      "Real Estate Photography",
+      "Product Photography",
+      "Visual Consulting",
+      "Drone Photography"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/khinnavisuals",
+      "https://www.linkedin.com/in/kevinhinna/"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "22:00"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Tokens ─────────────────────────────────────────────── */
+    :root {
+      --ink:   #1C1915;
+      --gold:  #C9A96E;
+      --cream: #F7F2EA;
+      --sand:  #E8DCCA;
+      --stone: #7A6F63;
+      --stone-on-dark:  #ADA192;
+      --stone-on-light: #6B5F52;
+
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-body:    'Jost', system-ui, sans-serif;
+
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --nav-h: 72px;
+    }
+
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--ff-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { display: block; width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--ff-body); border: none; background: none; }
+
+    /* ── Navigation ──────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 0 40px;
+      background: rgba(28, 25, 21, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+      transition: background 0.4s var(--ease);
+    }
+    nav.scrolled { background: rgba(28, 25, 21, 1); }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      text-decoration: none;
+      flex-shrink: 0;
+      min-width: 100px;
+    }
+    .nav-logo .wordmark-k {
+      font-family: 'Cormorant Garamond', Georgia, serif !important;
+      font-size: 1.15rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.25em !important;
+      color: #C9A96E !important;
+      line-height: 1 !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      -webkit-text-fill-color: #C9A96E !important;
+    }
+    .nav-logo .rule {
+      width: 100%;
+      height: 1px;
+      background: #C9A96E !important;
+      opacity: 0.6;
+      display: block;
+    }
+    .nav-logo .wordmark-v {
+      font-family: 'Jost', system-ui, sans-serif !important;
+      font-size: 0.58rem !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.45em !important;
+      color: #E8DCCA !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      -webkit-text-fill-color: #E8DCCA !important;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: all;
+    }
+    .nav-links a {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #E8DCCA;
+      opacity: 0.75;
+      transition: opacity 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { opacity: 1; color: #C9A96E; }
+
+    /* ── Language switcher ── */
+    .nav-right { display: flex; align-items: center; gap: 22px; flex-shrink: 0; }
+    .lang-switch { display: flex; align-items: center; gap: 8px; }
+    .lang-switch a {
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #E8DCCA;
+      opacity: 0.5;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .lang-switch a:hover { opacity: 1; color: #C9A96E; }
+    .lang-switch a.active { color: #C9A96E; opacity: 1; }
+    .lang-switch .sep { color: rgba(201,169,110,0.35); font-size: 0.6rem; }
+
+    .nav-cta {
+      display: inline-block !important;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C9A96E !important;
+      -webkit-text-fill-color: #C9A96E !important;
+      border: 1px solid rgba(201,169,110,0.5);
+      padding: 9px 20px;
+      cursor: pointer;
+      background: none;
+      transition: background 0.25s, color 0.25s;
+      flex-shrink: 0;
+      white-space: nowrap;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .nav-cta:hover { background: #C9A96E; color: #1C1915 !important; -webkit-text-fill-color: #1C1915 !important; }
+
+    /* ── Booking Modal ───────────────────────────────────────── */
+    .booking-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(28,25,21,0.85);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+    }
+    .booking-overlay.open { display: flex; }
+    .booking-modal {
+      background: #211e1a;
+      border: 1px solid rgba(201,169,110,0.2);
+      width: min(640px, 92vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 48px;
+    }
+    .booking-modal h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #F7F2EA;
+      margin-bottom: 6px;
+    }
+    .booking-modal h2 em { font-style: italic; color: #C9A96E; }
+    .booking-modal .bk-sub {
+      font-size: 0.8rem;
+      color: #9b9084;
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+    .bk-close {
+      position: absolute; top: 16px; right: 20px;
+      font-size: 1.4rem; color: #7A6F63; cursor: pointer;
+      background: none; border: none;
+    }
+    .booking-modal { position: relative; }
+    /* Calendar */
+    .cal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .cal-header button {
+      font-size: 1.1rem; color: #C9A96E; padding: 4px 10px;
+      border: 1px solid rgba(201,169,110,0.3);
+      transition: background 0.2s;
+    }
+    .cal-header button:hover { background: rgba(201,169,110,0.1); }
+    .cal-month {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      color: #F7F2EA;
+      letter-spacing: 0.08em;
+    }
+    .cal-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      gap: 4px; margin-bottom: 24px;
+    }
+    .cal-day-name {
+      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #7A6F63; text-align: center; padding: 4px 0;
+    }
+    .cal-day {
+      aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; color: #E8DCCA; cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+      border-radius: 2px;
+    }
+    .cal-day:hover:not(.disabled):not(.empty) {
+      border-color: rgba(201,169,110,0.4); color: #C9A96E;
+    }
+    .cal-day.selected { background: #C9A96E; color: #1C1915; font-weight: 500; }
+    .cal-day.today { border-color: rgba(201,169,110,0.3); }
+    .cal-day.disabled { color: #3a3530; cursor: default; }
+    .cal-day.empty { cursor: default; }
+    /* Time slots */
+    .bk-label {
+      font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: #9b9084; margin-bottom: 10px;
+    }
+    .time-slots {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+    }
+    .time-slot {
+      font-size: 0.75rem; letter-spacing: 0.1em;
+      border: 1px solid rgba(201,169,110,0.25);
+      color: #E8DCCA; padding: 8px 16px; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+    .time-slot:hover { border-color: rgba(201,169,110,0.6); color: #C9A96E; }
+    .time-slot.selected { background: #C9A96E; color: #1C1915; border-color: #C9A96E; }
+    /* Booking form fields */
+    .bk-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .bk-field { display: flex; flex-direction: column; gap: 5px; }
+    .bk-field label { font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; color: #9b9084; }
+    .bk-field input, .bk-field select {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,169,110,0.2);
+      color: #F7F2EA;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 0.88rem; font-weight: 300;
+      padding: 11px 14px; outline: none;
+      transition: border-color 0.2s;
+      appearance: none; border-radius: 0;
+    }
+    .bk-field input:focus, .bk-field select:focus { border-color: #C9A96E; }
+    .bk-field select option { background: #211e1a; }
+
+    /* hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      width: 26px; padding: 4px 0;
+    }
+    .hamburger span {
+      display: block; height: 1px; background: var(--gold);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0; z-index: 90;
+      background: var(--ink);
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 40px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .mobile-menu.open { display: flex; visibility: visible; pointer-events: all; }
+    .mobile-menu a {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 8vw, 3rem);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-lang {
+      display: flex; gap: 18px; margin-top: 8px;
+    }
+    .mobile-lang a {
+      font-family: var(--ff-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .mobile-lang a.active { color: var(--gold); }
+
+    /* ── Hero ────────────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+    }
+
+    /* Cinematic split: two tinted panels side by side */
+    .hero-panels {
+      position: absolute; inset: 0;
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-panel-img {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 8s linear;
+    }
+    .hero-panel:hover .hero-panel-img { transform: scale(1.04); }
+    .hero-panel::after {
+      content: ''; position: absolute; inset: 0;
+    }
+    /* left panel: real estate */
+    #panel-re .hero-panel-img {
+      background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80');
+    }
+    #panel-re::after {
+      background: linear-gradient(to right, rgba(28,25,21,0.62) 0%, rgba(28,25,21,0.22) 100%);
+    }
+    /* right panel: product */
+    #panel-prod .hero-panel-img {
+      background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&q=80');
+    }
+    #panel-prod::after {
+      background: linear-gradient(to left, rgba(28,25,21,0.62) 0%, rgba(28,25,21,0.22) 100%);
+    }
+    /* centre vignette + readability scrim */
+    .hero-panels::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(28,25,21,0.96) 0%, rgba(28,25,21,0.78) 30%, rgba(28,25,21,0.35) 58%, rgba(28,25,21,0) 80%);
+      pointer-events: none;
+    }
+    /* vertical divider */
+    .hero-divider {
+      position: absolute; top: 0; bottom: 0;
+      left: 50%; width: 1px;
+      background: rgba(201,169,110,0.28);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative; z-index: 3;
+      width: 100%;
+      padding: 0 clamp(24px, 6vw, 96px) clamp(56px, 8vh, 100px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: flex-end;
+      gap: 32px;
+    }
+
+    .hero-left .eyebrow {
+      font-family: var(--ff-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .hero-left h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+      text-shadow: 0 1px 30px rgba(28,25,21,0.45);
+    }
+    .hero-left h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-left .sub {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: rgba(247,242,234,0.88);
+      letter-spacing: 0.06em;
+      line-height: 1.75;
+      max-width: 440px;
+    }
+    .hero-left .hero-btns {
+      margin-top: 36px;
+      display: flex; gap: 16px; flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--ff-body);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 14px 32px;
+      transition: background 0.25s;
+    }
+    .btn-primary:hover { background: #d9b97e; }
+    .btn-outline {
+      display: inline-block;
+      font-family: var(--ff-body);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,169,110,0.5);
+      color: var(--sand);
+      padding: 13px 32px;
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-right {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 12px;
+      padding-bottom: 4px;
+    }
+    .hero-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(247,242,234,0.5);
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    /* ── Marquee strip ───────────────────────────────────────── */
+    .marquee-strip {
+      background: var(--gold);
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-inner {
+      display: inline-flex; gap: 0;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee-item {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink);
+      font-weight: 500;
+      padding: 0 48px;
+    }
+    .marquee-sep {
+      color: var(--ink); opacity: 0.4; padding: 0 0 0 0;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-inner { animation: none; }
+    }
+
+    /* ── Section shells ──────────────────────────────────────── */
+    section { padding: clamp(72px, 10vw, 130px) clamp(24px, 6vw, 96px); }
+    .section-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--cream);
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .gold-rule {
+      width: 48px; height: 1px;
+      background: var(--gold);
+      margin: 28px 0;
+    }
+    .section-body {
+      font-size: 0.95rem;
+      color: var(--stone);
+      max-width: 560px;
+      line-height: 1.85;
+    }
+
+    /* ── Work / Portfolio grid ───────────────────────────────── */
+    #work { background: var(--ink); }
+    .work-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      flex-wrap: wrap; gap: 24px;
+      margin-bottom: 56px;
+    }
+    .work-filter {
+      display: flex; gap: 4px;
+    }
+    .filter-btn {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      padding: 8px 18px;
+      border: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      color: var(--gold);
+      border-color: rgba(201,169,110,0.35);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2px;
+    }
+    .pf-item {
+      position: relative; overflow: hidden;
+      background: var(--ink);
+      cursor: pointer;
+    }
+    /* Varied grid spans for editorial feel */
+    .pf-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+    .pf-item:nth-child(2) { grid-column: span 5; }
+    .pf-item:nth-child(3) { grid-column: span 5; }
+    .pf-item:nth-child(4) { grid-column: span 4; }
+    .pf-item:nth-child(5) { grid-column: span 4; }
+    .pf-item:nth-child(6) { grid-column: span 4; }
+
+    .pf-img {
+      width: 100%; height: 100%; min-height: 260px;
+      object-fit: cover;
+      background-size: cover; background-position: center;
+      transition: transform 0.6s var(--ease);
+    }
+    .pf-item:hover .pf-img { transform: scale(1.04); }
+
+    /* constant cohesion wash so bright product shots sit with the dark interiors */
+    .pf-item::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(28,25,21,0.32) 0%, rgba(28,25,21,0) 55%);
+    }
+    .pf-item[data-cat="product"]::before {
+      background: rgba(28,25,21,0.07);
+    }
+
+    .pf-overlay {
+      position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(to top, rgba(28,25,21,0.88) 0%, transparent 55%);
+      opacity: 0;
+      transition: opacity 0.35s var(--ease);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 28px;
+    }
+    .pf-item:hover .pf-overlay { opacity: 1; }
+    .pf-cat {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .pf-title {
+      font-family: var(--ff-display);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--cream);
+    }
+
+    /* ── Services ────────────────────────────────────────────── */
+    #services {
+      background: var(--cream);
+      color: var(--ink);
+    }
+    #services .section-title { color: var(--ink); }
+    #services .section-body { color: var(--stone-on-light); }
+    .services-grid {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+    }
+    .service-card {
+      background: #161310;
+      padding: 48px 40px 52px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s var(--ease);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover { background: #faf8f4; }
+
+    .service-num {
+      font-family: var(--ff-display);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: rgba(201,169,110,0.5);
+      line-height: 1;
+      margin-bottom: 24px;
+      transition: color 0.3s;
+    }
+    .service-card:hover .service-num { color: var(--gold); }
+
+    .service-title {
+      font-family: var(--ff-display);
+      font-size: 1.55rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 16px;
+      line-height: 1.2;
+      transition: color 0.3s;
+    }
+    .service-card:hover .service-title { color: var(--ink); }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--stone-on-dark);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      transition: color 0.3s;
+    }
+    .service-card:hover .service-desc { color: var(--stone-on-light); }
+
+    .service-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .service-list li {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--stone-on-dark);
+      display: flex; align-items: center; gap: 10px;
+      transition: color 0.3s;
+    }
+    .service-card:hover .service-list li { color: var(--stone-on-light); }
+    .service-list li::before {
+      content: '';
+      width: 18px; height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── Process ──────────────────────────────────────────────── */
+    #process {
+      background: #161310;
+    }
+    .process-steps {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 24px; left: 0; right: 0;
+      height: 1px;
+      background: rgba(201,169,110,0.18);
+    }
+    .process-step {
+      padding: 0 24px 0 0;
+    }
+    .step-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-bottom: 28px;
+      position: relative; z-index: 1;
+    }
+    .step-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .step-title {
+      font-family: var(--ff-display);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .step-body {
+      font-size: 0.83rem;
+      color: var(--stone-on-dark);
+      line-height: 1.75;
+    }
+
+    /* ── About Editorial ─────────────────────────────────────── */
+    .about-editorial {
+      background: var(--ink);
+      color: var(--cream);
+      padding: clamp(72px, 10vw, 130px) 0;
+    }
+    .about-ed-top {
+      padding: 0 clamp(24px, 6vw, 96px);
+      margin-bottom: 64px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .about-ed-headline {
+      font-family: var(--ff-display);
+      font-size: clamp(3rem, 5.5vw, 6rem);
+      font-weight: 600;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+    }
+    .about-ed-headline em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold);
+    }
+    .about-ed-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-ed-left {
+      position: relative;
+      overflow: hidden;
+    }
+    .about-ed-img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s var(--ease);
+    }
+    .about-ed-left:hover .about-ed-img { transform: scale(1.03); }
+    .about-ed-right {
+      padding: clamp(40px, 5vw, 80px) clamp(32px, 5vw, 80px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      background: #161310;
+    }
+    .about-ed-block {}
+    .about-ed-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .about-ed-text {
+      font-size: 1rem;
+      color: var(--stone-on-dark);
+      line-height: 1.9;
+    }
+    .about-ed-cta { margin-top: 8px; }
+
+    /* ── Testimonials ────────────────────────────────────────── */
+    #testimonials {
+      background: var(--ink);
+      text-align: center;
+    }
+    .testimonials-track {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .testimonial {
+      background: #211e1a;
+      padding: 48px 40px;
+      text-align: left;
+    }
+    .quote-mark {
+      font-family: var(--ff-display);
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 0.6;
+      margin-bottom: 20px;
+    }
+    .quote-text {
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .quote-author {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .quote-author strong {
+      display: block;
+      color: var(--gold);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      margin-bottom: 2px;
+    }
+
+    /* ── Contact ─────────────────────────────────────────────── */
+    #contact {
+      background: var(--cream);
+      color: var(--ink);
+    }
+    #contact .section-title { color: var(--ink); }
+
+    .contact-grid {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: clamp(40px, 6vw, 96px);
+    }
+    .contact-info { padding-top: 4px; }
+    .contact-detail {
+      display: flex; flex-direction: column; gap: 4px;
+      margin-bottom: 32px;
+    }
+    .contact-detail .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--stone-on-light);
+    }
+    .contact-detail .value {
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+    .contact-detail .value a:hover { color: var(--gold); }
+
+    .contact-social {
+      margin-top: 40px;
+      display: flex; gap: 16px;
+    }
+    .social-link {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-on-light);
+      border: 1px solid rgba(122,111,99,0.3);
+      padding: 8px 18px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .social-link:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* Contact form */
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label {
+      font-size: 0.65rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone-on-light);
+    }
+    .field input, .field textarea, .field select {
+      background: white;
+      border: 1px solid rgba(122,111,99,0.25);
+      color: var(--ink);
+      font-family: var(--ff-body);
+      font-size: 0.9rem;
+      font-weight: 300;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+    .field textarea { resize: vertical; min-height: 130px; }
+    .field input:focus, .field textarea:focus, .field select:focus {
+      border-color: var(--gold);
+    }
+    .field input::placeholder, .field textarea::placeholder { color: #b0a89e; }
+
+    .form-submit {
+      align-self: flex-start;
+    }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      padding: 48px clamp(24px, 6vw, 96px);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 24px;
+      border-top: 1px solid rgba(201,169,110,0.12);
+    }
+    .footer-logo .wordmark-k { font-size: 1rem; }
+    .footer-copy {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--stone);
+    }
+    .footer-links {
+      display: flex; gap: 28px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      position: static !important;
+      z-index: auto !important;
+      height: auto !important;
+      background: none !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+    .footer-links a {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── WhatsApp Button ─────────────────────────────────────── */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 52px;
+      height: 52px;
+      background: rgba(33,30,26,0.92);
+      border: 1px solid rgba(201,169,110,0.55);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: transform 0.2s, background 0.25s, border-color 0.25s;
+      text-decoration: none;
+    }
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .whatsapp-btn svg { width: 26px; height: 26px; fill: var(--gold); transition: fill 0.25s; }
+    .whatsapp-btn:hover svg { fill: var(--ink); }
+
+    /* ── Cookie Banner ───────────────────────────────────────── */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 1500;
+      background: #211e1a;
+      border-top: 1px solid rgba(201,169,110,0.15);
+      padding: 20px clamp(24px, 5vw, 72px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      transform: translateY(100%);
+      transition: transform 0.4s var(--ease);
+    }
+    .cookie-banner.visible { transform: translateY(0); }
+    .cookie-text {
+      font-size: 0.8rem;
+      color: var(--stone-on-dark);
+      line-height: 1.6;
+      max-width: 680px;
+    }
+    .cookie-text a { color: var(--gold); text-decoration: underline; }
+    .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+    .cookie-accept {
+      font-family: var(--ff-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--ink);
+      border: none;
+      padding: 10px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cookie-accept:hover { background: #d9b97e; }
+    .cookie-decline {
+      font-family: var(--ff-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: none;
+      color: var(--stone);
+      border: 1px solid rgba(122,111,99,0.3);
+      padding: 9px 24px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .cookie-decline:hover { border-color: var(--stone); color: var(--cream); }
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.22s; }
+    .reveal-delay-3 { transition-delay: 0.34s; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .pf-item { grid-column: span 1 !important; grid-row: span 1 !important; }
+      .pf-img { min-height: 200px; }
+      .about-ed-body { grid-template-columns: 1fr; }
+      .about-ed-img { min-height: 340px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .process-steps::before { display: none; }
+      .testimonials-track { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .nav-cta { display: none !important; }
+      .lang-switch { gap: 6px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .hero-panels { grid-template-columns: 1fr; }
+      #panel-prod { display: none; }
+      .hero-divider { display: none; }
+      .process-steps { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo" aria-label="Khinna Visuals Home">
+      <span class="wordmark-k">Khinna</span>
+      <span class="rule"></span>
+      <span class="wordmark-v">Visuals</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#work">Réalisations</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switch" aria-label="Language">
+        <a href="index.html" hreflang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="fr.html" class="active" hreflang="fr">FR</a>
+        <span class="sep">·</span>
+        <a href="de.html" hreflang="de">DE</a>
+      </div>
+      <button class="nav-cta" onclick="openBooking()">Réserver une séance</button>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Booking Modal ── -->
+  <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-modal">
+      <button class="bk-close" onclick="closeBooking()">✕</button>
+      <h2>Réserver une <em>séance</em></h2>
+      <p class="bk-sub">Choisissez une date, un horaire et un service — nous confirmons sous 24 heures.</p>
+
+      <div class="cal-header">
+        <button onclick="prevMonth()">‹</button>
+        <span class="cal-month" id="calMonth"></span>
+        <button onclick="nextMonth()">›</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+
+      <p class="bk-label">Horaires disponibles</p>
+      <div class="time-slots" id="timeSlots">
+        <button class="time-slot" onclick="selectTime(this)">08:00</button>
+        <button class="time-slot" onclick="selectTime(this)">09:00</button>
+        <button class="time-slot" onclick="selectTime(this)">10:00</button>
+        <button class="time-slot" onclick="selectTime(this)">11:00</button>
+        <button class="time-slot" onclick="selectTime(this)">12:00</button>
+        <button class="time-slot" onclick="selectTime(this)">13:00</button>
+        <button class="time-slot" onclick="selectTime(this)">14:00</button>
+        <button class="time-slot" onclick="selectTime(this)">15:00</button>
+        <button class="time-slot" onclick="selectTime(this)">16:00</button>
+        <button class="time-slot" onclick="selectTime(this)">17:00</button>
+        <button class="time-slot" onclick="selectTime(this)">18:00</button>
+        <button class="time-slot" onclick="selectTime(this)">19:00</button>
+        <button class="time-slot" onclick="selectTime(this)">20:00</button>
+        <button class="time-slot" onclick="selectTime(this)">21:00</button>
+        <button class="time-slot" onclick="selectTime(this)">22:00</button>
+      </div>
+
+      <div class="bk-fields">
+        <div class="bk-field">
+          <label>Votre nom</label>
+          <input type="text" id="bk-name" placeholder="Nom complet" />
+        </div>
+        <div class="bk-field">
+          <label>E-mail</label>
+          <input type="email" id="bk-email" placeholder="your@email.com" />
+        </div>
+        <div class="bk-field">
+          <label>Service</label>
+          <select id="bk-service">
+            <option value="" disabled selected>Sélectionnez un service</option>
+            <option>Photographie immobilière</option>
+            <option>Photographie de produits</option>
+            <option>Conseil visuel</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="submitBooking()" style="width:100%;text-align:center;">Confirmer la demande</button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <a href="#work"     onclick="closeMobile()">Réalisations</a>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#about"    onclick="closeMobile()">À propos</a>
+    <a href="#contact"  onclick="closeMobile()">Contact</a>
+    <div class="mobile-lang">
+      <a href="index.html">EN</a>
+      <a href="fr.html" class="active">FR</a>
+      <a href="de.html">DE</a>
+    </div>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-panels">
+      <div class="hero-panel" id="panel-re">
+        <div class="hero-panel-img"></div>
+      </div>
+      <div class="hero-panel" id="panel-prod">
+        <div class="hero-panel-img"></div>
+      </div>
+    </div>
+    <div class="hero-divider"></div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <p class="eyebrow">Luxembourg — Immobilier &amp; Produit</p>
+        <h1>Des images qui<br><em>méritent leur place.</em></h1>
+        <p class="sub">Khinna Visuals réalise une photographie d'architecture et de produit qui fait vendre les biens, valorise les marques et transforme la première impression en décision.</p>
+        <div class="hero-btns">
+          <a href="#work" class="btn-primary">Voir le portfolio</a>
+          <a href="#contact" class="btn-outline">Nous contacter</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <span class="hero-tag">Luxembourg-Ville et Grande Région</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Marquee ── -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      <!-- duplicated for seamless loop -->
+      <span class="marquee-item">Photographie immobilière</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Photographie de produits</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Conseil visuel</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Luxembourg</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Grande Région</span>
+      <span class="marquee-item marquee-sep">—</span>
+
+      <span class="marquee-item">Photographie immobilière</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Photographie de produits</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Conseil visuel</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Luxembourg</span>
+      <span class="marquee-item marquee-sep">—</span>
+      <span class="marquee-item">Grande Région</span>
+      <span class="marquee-item marquee-sep">—</span>
+    </div>
+  </div>
+
+  <!-- ── Portfolio ── -->
+  <section id="work">
+    <div class="work-header">
+      <div>
+        <p class="section-eyebrow reveal">Travaux sélectionnés</p>
+        <h2 class="section-title reveal reveal-delay-1">Chaque image,<br><em>une décision.</em></h2>
+      </div>
+      <div class="work-filter reveal reveal-delay-2" role="group" aria-label="Filter portfolio">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="real-estate">Immobilier</button>
+        <button class="filter-btn" data-filter="product">Produit</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="pf-item reveal" data-cat="real-estate">
+        <div class="pf-img" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1400&q=80')"></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Immobilier</p>
+          <p class="pf-title">Penthouse — Kirchberg, Luxembourg</p>
+        </div>
+      </div>
+      <div class="pf-item reveal reveal-delay-1" data-cat="product">
+        <div class="pf-img" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=900&q=80')"></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Produit</p>
+          <p class="pf-title">Série sport — Studio</p>
+        </div>
+      </div>
+      <div class="pf-item reveal reveal-delay-2" data-cat="product">
+        <div class="pf-img" style="background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80')"></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Produit</p>
+          <p class="pf-title">Montre de précision — Éditorial</p>
+        </div>
+      </div>
+      <div class="pf-item reveal" data-cat="real-estate">
+        <div class="pf-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')"></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Immobilier</p>
+          <p class="pf-title">Villa — Merl</p>
+        </div>
+      </div>
+      <div class="pf-item reveal reveal-delay-1" data-cat="real-estate">
+        <div class="pf-img" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80')"></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Immobilier</p>
+          <p class="pf-title">Loft moderne — Bonnevoie</p>
+        </div>
+      </div>
+      <div class="pf-item reveal reveal-delay-2" data-cat="product">
+        <div class="pf-img" style="background-image:url('https://images.unsplash.com/photo-1542038374869-3c2e8a7c91ee?w=900&q=80')"></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Produit</p>
+          <p class="pf-title">Gamme cosmétique — Flat lay</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services ── -->
+  <section id="services">
+    <div>
+      <p class="section-eyebrow reveal">Ce que nous faisons</p>
+      <h2 class="section-title reveal reveal-delay-1">Trois services,<br><em>une même exigence.</em></h2>
+      <div class="gold-rule reveal reveal-delay-2"></div>
+      <p class="section-body reveal reveal-delay-2">Que vous vendiez un bien, lanciez un produit ou affiniez votre direction visuelle — Khinna Visuals livre des images conçues pour performer.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- 01 -->
+      <div class="service-card reveal">
+        <p class="service-num">01</p>
+        <h3 class="service-title">Photographie immobilière</h3>
+        <p class="service-desc">Architecture, intérieurs et atmosphère — capturés avec la précision qui transforme les visites en offres. Nous travaillons avec des agents, des promoteurs et des vendeurs particuliers dans tout le Luxembourg et la Grande Région.</p>
+        <ul class="service-list">
+          <li>Photographie intérieure et extérieure</li>
+          <li>Séances au crépuscule</li>
+          <li>Prises de vue aériennes et par drone</li>
+          <li>Production de contenus pour visites virtuelles</li>
+          <li>Livraison le jour même possible</li>
+        </ul>
+      </div>
+
+      <!-- 02 -->
+      <div class="service-card reveal reveal-delay-1">
+        <p class="service-num">02</p>
+        <h3 class="service-title">Photographie de produits</h3>
+        <p class="service-desc">Travail studio épuré ou éditorial stylisé — nous photographions les produits qui doivent se démarquer à l'écran comme en rayon. Du packshot à la campagne lifestyle, pensé pour l'e-commerce et la communication de marque.</p>
+        <ul class="service-list">
+          <li>Packshots sur fond neutre</li>
+          <li>Photos lifestyle et en situation</li>
+          <li>Vues produit à 360°</li>
+          <li>Photographie culinaire et boissons</li>
+          <li>Retouche en marque blanche</li>
+        </ul>
+      </div>
+
+      <!-- 03 -->
+      <div class="service-card reveal reveal-delay-2">
+        <p class="service-num">03</p>
+        <h3 class="service-title">Conseil visuel</h3>
+        <p class="service-desc">Vous ne savez pas où vos visuels vous desservent ? Nous auditons votre bibliothèque d'images existante, définissons un brief et élaborons un plan de prise de vue qui aligne chaque image sur vos objectifs de marque.</p>
+        <ul class="service-list">
+          <li>Audit d'identité visuelle</li>
+          <li>Création du brief et de la shotlist</li>
+          <li>Direction artistique des séances</li>
+          <li>Forfait récurrent disponible</li>
+          <li>Partenariats agences et studios</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Process ── -->
+  <section id="process">
+    <p class="section-eyebrow reveal">Notre méthode</p>
+    <h2 class="section-title reveal reveal-delay-1">Du brief<br><em>au fichier final.</em></h2>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-dot"></div>
+        <p class="step-label">Étape un</p>
+        <h3 class="step-title">Appel découverte</h3>
+        <p class="step-body">Nous cernons vos objectifs, votre calendrier et votre public — pour construire le brief autour des résultats, pas des suppositions.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-dot"></div>
+        <p class="step-label">Étape deux</p>
+        <h3 class="step-title">Brief créatif</h3>
+        <p class="step-body">Un plan de prise de vue concis, des références visuelles et un planning. Vous validez avant que nous touchions à l'appareil.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-dot"></div>
+        <p class="step-label">Étape trois</p>
+        <h3 class="step-title">La séance</h3>
+        <p class="step-body">Sur site ou en studio, nous travaillons avec efficacité et précision — dans le respect de vos lieux et de votre emploi du temps.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-dot"></div>
+        <p class="step-label">Étape quatre</p>
+        <h3 class="step-title">Retouché et livré</h3>
+        <p class="step-body">Entièrement retouchées, formatées pour vos canaux et livrées via une galerie privée sous 48 heures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about" class="about-editorial">
+    <div class="about-ed-top reveal">
+      <p class="section-eyebrow">À propos</p>
+      <h2 class="about-ed-headline">Chaque image doit avoir une<br><em>raison d'être.</em></h2>
+    </div>
+    <div class="about-ed-body">
+      <div class="about-ed-left reveal">
+        <div class="about-ed-img" style="background-image:url('about-photo.jpg')" role="img" aria-label="Kevin Hinna shooting on location"></div>
+      </div>
+      <div class="about-ed-right">
+        <div class="about-ed-block reveal">
+          <p class="about-ed-label">Le studio</p>
+          <p class="about-ed-text">Khinna Visuals est un studio de photographie basé au Luxembourg, spécialisé dans l'imagerie immobilière et produit. Chaque commande est abordée avec précision, patience et une obsession de la lumière.</p>
+        </div>
+        <div class="about-ed-block reveal reveal-delay-1">
+          <p class="about-ed-label">L'approche</p>
+          <p class="about-ed-text">Nous ne photographions pas à la hâte pour rattraper en post-production. Nous planifions, nous préparons et nous restons sur place jusqu'à ce que l'image mérite sa place. Le résultat : une bibliothèque d'images efficaces — sur les annonces, les fiches produit et les écrans de toutes tailles.</p>
+        </div>
+        <div class="about-ed-block reveal reveal-delay-2">
+          <p class="about-ed-label">Le territoire</p>
+          <p class="about-ed-text">Basé à Kayl, intervenant dans tout le Luxembourg et la Grande Région. Disponible pour des commandes ponctuelles, des forfaits récurrents et des partenariats avec des agences.</p>
+        </div>
+        <div class="about-ed-cta reveal reveal-delay-3">
+          <a href="#contact" class="btn-outline" style="display:inline-block">Démarrer la conversation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div>
+      <p class="section-eyebrow reveal">Contactez-nous</p>
+      <h2 class="section-title reveal reveal-delay-1">Créons<br><em>quelque chose qui mérite d'être vu.</em></h2>
+      <div class="gold-rule reveal reveal-delay-2"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <span class="label">Studio</span>
+          <span class="value">Kayl, Luxembourg</span>
+        </div>
+        <div class="contact-detail">
+          <span class="label">E-mail</span>
+          <span class="value"><a href="mailto:info@khinnavisuals.com">info@khinnavisuals.com</a></span>
+        </div>
+        <div class="contact-detail">
+          <span class="label">Téléphone</span>
+          <span class="value"><a href="tel:+352691855405">+352 691 855 405</a></span>
+        </div>
+        <div class="contact-detail">
+          <span class="label">Délai de réponse</span>
+          <span class="value">Sous un jour ouvré</span>
+        </div>
+        <div class="contact-social">
+          <a href="https://instagram.com/khinnavisuals" target="_blank" class="social-link">Instagram</a>
+          <a href="https://www.linkedin.com/in/kevinhinna/" target="_blank" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal reveal-delay-1" onsubmit="handleSubmit(event)" action="https://formspree.io/f/xeewryka" method="POST" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="f-name">Nom</label>
+            <input type="text" id="f-name" name="name" placeholder="Votre nom" required />
+          </div>
+          <div class="field">
+            <label for="f-email">E-mail</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-service">Service</label>
+          <select id="f-service" name="service">
+            <option value="" disabled selected>Sélectionnez un service</option>
+            <option value="real-estate">Photographie immobilière</option>
+            <option value="product">Photographie de produits</option>
+            <option value="consulting">Conseil visuel</option>
+            <option value="other">Autre / Je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" placeholder="Parlez-nous de votre projet — lieu, calendrier et tout détail que vous avez en tête." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit">Envoyer la demande</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <a href="#hero" class="nav-logo footer-logo" aria-label="Back to top">
+      <span class="wordmark-k">Khinna</span>
+      <span class="rule"></span>
+      <span class="wordmark-v">Visuals</span>
+    </a>
+    <p class="footer-copy">© 2025 Khinna Visuals — Kevin Hinna. Kayl, Luxembourg.</p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#work">Réalisations</a>
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    // ── Nav scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // ── Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ── Portfolio filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.pf-item').forEach(item => {
+          const show = filter === 'all' || item.dataset.cat === filter;
+          item.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+
+    // ── Contact form
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Envoi...';
+      btn.disabled = true;
+      try {
+        const response = await fetch('https://formspree.io/f/xeewryka', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          btn.textContent = 'Envoyé — nous vous recontactons.';
+          btn.style.background = '#7A6F63';
+          form.reset();
+        } else {
+          btn.textContent = 'Une erreur est survenue — veuillez réessayer.';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Une erreur est survenue — veuillez réessayer.';
+        btn.disabled = false;
+      }
+    }
+
+    // ── Booking modal
+    let currentDate = new Date();
+    let selectedDay = null;
+    let selectedTime = null;
+
+    function openBooking() {
+      document.getElementById('bookingOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      renderCalendar();
+    }
+    function closeBooking() {
+      document.getElementById('bookingOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('bookingOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeBooking();
+    });
+
+    function renderCalendar() {
+      const months = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      document.getElementById('calMonth').textContent = months[month] + ' ' + year;
+
+      const grid = document.getElementById('calGrid');
+      grid.innerHTML = '';
+      const days = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
+      days.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'cal-day-name';
+        el.textContent = d;
+        grid.appendChild(el);
+      });
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const offset = (firstDay === 0) ? 6 : firstDay - 1;
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const today = new Date();
+
+      for (let i = 0; i < offset; i++) {
+        const el = document.createElement('div');
+        el.className = 'cal-day empty';
+        grid.appendChild(el);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const el = document.createElement('div');
+        el.className = 'cal-day';
+        el.textContent = d;
+        const thisDate = new Date(year, month, d);
+        const isPast = thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+        if (isPast) {
+          el.classList.add('disabled');
+        } else {
+          if (thisDate.toDateString() === today.toDateString()) el.classList.add('today');
+          if (selectedDay && thisDate.toDateString() === selectedDay.toDateString()) el.classList.add('selected');
+          el.addEventListener('click', () => selectDay(el, thisDate));
+        }
+        grid.appendChild(el);
+      }
+    }
+
+    function selectDay(el, date) {
+      selectedDay = date;
+      document.querySelectorAll('.cal-day').forEach(d => d.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function prevMonth() {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar();
+    }
+    function nextMonth() {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar();
+    }
+
+    function selectTime(btn) {
+      document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedTime = btn.textContent;
+    }
+
+    async function submitBooking() {
+      const name = document.getElementById('bk-name').value;
+      const email = document.getElementById('bk-email').value;
+      const service = document.getElementById('bk-service').value;
+      if (!selectedDay || !selectedTime || !name || !email || !service) {
+        alert('Veuillez remplir tous les champs et choisir une date et une heure.');
+        return;
+      }
+      const btn = document.querySelector('.booking-modal .btn-primary');
+      btn.textContent = 'Envoi...';
+      btn.disabled = true;
+
+      const dateStr = selectedDay.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+      try {
+        const response = await fetch('https://formspree.io/f/xeewryka', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name, email, service,
+            date: dateStr,
+            time: selectedTime,
+            message: `Demande de réservation : ${service} le ${dateStr} à ${selectedTime}`
+          })
+        });
+        if (response.ok) {
+          btn.textContent = 'Demande envoyée — confirmation à venir !';
+          btn.style.background = '#7A6F63';
+        } else {
+          btn.textContent = 'Une erreur est survenue — veuillez réessayer.';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Une erreur est survenue — veuillez réessayer.';
+        btn.disabled = false;
+      }
+    }
+    // ── Cookie banner
+    function acceptCookies() {
+      try { localStorage.setItem('cookies_accepted', 'true'); } catch (e) {}
+      document.getElementById('cookieBanner').classList.remove('visible');
+    }
+    function declineCookies() {
+      try { localStorage.setItem('cookies_accepted', 'declined'); } catch (e) {}
+      document.getElementById('cookieBanner').classList.remove('visible');
+    }
+    let cookieChoice = null;
+    try { cookieChoice = localStorage.getItem('cookies_accepted'); } catch (e) {}
+    if (!cookieChoice) {
+      setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500);
+    }
+  </script>
+  <!-- ── WhatsApp Button ── -->
+  <a href="https://wa.me/352691855405?text=Bonjour%20Khinna%20Visuals%2C%20je%20souhaite%20me%20renseigner%20sur%20une%20s%C3%A9ance%20photo." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ── Cookie Banner ── -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+    <p class="cookie-text">Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site. En poursuivant votre navigation, vous acceptez notre utilisation des cookies conformément à la réglementation européenne.</p>
+    <div class="cookie-btns">
+      <button class="cookie-decline" onclick="declineCookies()">Refuser</button>
+      <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    </div>
+  </div>
+
+</body>
+</html>
